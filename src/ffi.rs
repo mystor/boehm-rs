@@ -12,6 +12,7 @@ pub type GC_finalization_proc =
 pub type GC_warn_proc = extern "C" fn(arg1: *mut c_schar, arg2: GC_word);
 pub type GC_hidden_pointer = GC_word;
 pub type GC_fn_type = extern "C" fn(arg1: *mut c_void) -> *mut c_void;
+#[repr(C)]
 pub struct Struct_GC_stack_base {
     mem_base: *mut c_void,
 }
